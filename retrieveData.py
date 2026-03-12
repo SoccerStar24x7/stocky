@@ -1,6 +1,6 @@
-from yahoo_fin.stock_info import *
+from yahoo_fin as yfin
 ticker = "SPMO"
 
-data = get_quote_table(ticker, False)
+data = yfin.stock_info.get_quote_table(ticker, False)
 
 print(data)

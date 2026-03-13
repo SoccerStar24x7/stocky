@@ -1,6 +1,12 @@
-from yahoo_fin as yfin
-ticker = "SPMO"
+def retrieveData(stock):
+    import yfinance as yf
 
-data = yfin.stock_info.get_quote_table(ticker, False)
+    ticker = yf.Ticker(stock)
 
-print(data)
+    data = ticker.history(period="1mo")
+    data = data.drop(columns=["Dividends", "Stock Splits"])
+
+    exportCSV(data)
+    
+def exportCSV(data):
+    data.to_csv('data.csv', index=False)

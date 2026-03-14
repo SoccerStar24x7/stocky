@@ -17,11 +17,11 @@ int main() {
     while (std::getline(file, line)) {
         std::string cell;
         std::stringstream ss(line);
-        std::vector<std::string> row;
 
         while (std::getline(ss, cell, ',')) {
-            row.push_back(cell);
-            std::cout << cell << " ";
+            
+            if (cell == "Open" || cell == "High" || cell == "Low" || cell == "Close" || cell == "Volume")
+                cell = "";
 
             for (int i = 1; i <= 5; i++) {
                 switch(i) {

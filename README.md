@@ -1,5 +1,5 @@
 # stocky
-A tool that allows you to view stocks straight from your browser.
+A tool that allows you to view stocks straight from your browser, and utilizes plotext.
 
 Basic syntax:
 
